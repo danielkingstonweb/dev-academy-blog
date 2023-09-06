@@ -1,17 +1,18 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   text-decoration: none;
 }
 
-*::after, *::before{
-  margin: 0; 
-  padding: 0; 
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
   box-sizing: inherit;
 }
 
-html{
+html {
   font-size: 62.5% !important;
   scroll-behavior: smooth;
   user-select: none;
@@ -23,20 +24,20 @@ li {
 }
 
 .light {
-  --primary: #EAE3D3;
+  --primary: #eae3d3;
   --secondary: #030303;
   --white: #f4f4f4;
-  --accent-1: #E01606;
-  --accent-2: #FAA907;
+  --accent-1: #e01606;
+  --accent-2: #faa907;
   --accent-3: #080877;
 }
 
 .dark {
   --primary: #030303;
-  --secondary: #EAE3D3;
+  --secondary: #eae3d3;
   --white: #f4f4f4;
-  --accent-1: #E01606;
-  --accent-2: #FAA907;
+  --accent-1: #e01606;
+  --accent-2: #faa907;
   --accent-3: #080877;
 }
 
@@ -54,26 +55,61 @@ li {
 ::-webkit-scrollbar-thumb {
   -webkit-border-radius: 10px;
   border-radius: 10px;
-  background: #6d6d6d; 
+  background: #6d6d6d;
 }
 
 .landing-backrgound {
-	background: linear-gradient(-83deg, #daffa3, #a5fff5, #ffabe2, #ffe0a1);
-	background-size: 400% 400%;
-	animation: gradient 8s ease-in-out infinite;
-	height: 100vh;
+  background: linear-gradient(-83deg, #daffa3, #a5fff5, #ffabe2, #ffe0a1);
+  background-size: 400% 400%;
+  animation: gradient 8s ease-in-out infinite;
+  height: 100vh;
   width: 100%;
   position: absolute;
 }
 
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.navigation {
+  height: 15vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2em;
+}
+
+.navigation-link {
+  background: none;
+}
+
+.navigation-logo {
+  width: 10vw;
+  height: 100%;
+  background: url(../img/logos/DK---Dark.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left center;
+}
+
+.nav {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1em;
+  font-size: 2rem;
+}
+
+.nav-item {
+  color: var(--secondary);
 }
