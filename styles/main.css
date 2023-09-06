@@ -1,0 +1,58 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+*::after, *::before{
+  margin: 0; 
+  padding: 0; 
+  box-sizing: inherit;
+}
+
+html{
+  font-size: 62.5% !important;
+  scroll-behavior: smooth;
+  user-select: none;
+}
+
+li {
+  list-style: none;
+  cursor: pointer;
+}
+
+.light {
+  --primary: #EAE3D3;
+  --secondary: #030303;
+  --white: #f4f4f4;
+  --accent-1: #E01606;
+  --accent-2: #FAA907;
+  --accent-3: #080877;
+}
+
+.dark {
+  --primary: #030303;
+  --secondary: #EAE3D3;
+  --white: #f4f4f4;
+  --accent-1: #E01606;
+  --accent-2: #FAA907;
+  --accent-3: #080877;
+}
+
+/* Scrollbar Styling Begins */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ebebeb;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #6d6d6d; 
+}
