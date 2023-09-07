@@ -1,3 +1,5 @@
+/* RESETS BEGIN */
+
 * {
   padding: 0;
   margin: 0 !important;
@@ -67,16 +69,28 @@ li {
   background: #6d6d6d;
 }
 
+/* RESETS END */
+
+/* FONTS BEGIN */
+
 @font-face {
-  font-family: "Gogh";
-  src: url("../fonts/Gogh-ExtraBold.otf"),
-  url("../fonts/Gogh-ExtraBoldItalic.otf");
+  font-family: 'Gogh';
+  src: url('../fonts/Gogh-ExtraBold.otf'),
+    url('../fonts/Gogh-ExtraBoldItalic.otf');
 }
 
 @font-face {
   font-family: 'Barbarella';
-  src: url("../fonts/gogh/Barbarella.otf");
+  src: url('../fonts/gogh/Barbarella.otf');
 }
+
+/* FONTS BEGIN */
+
+body {
+  background: var(--primary);
+}
+
+/* LANDING PAGE STYLING BEGINS */
 
 .landing-backrgound {
   background: linear-gradient(-83deg, #daffa3, #a5fff5, #ffabe2, #ffe0a1);
@@ -85,6 +99,7 @@ li {
   height: 100vh;
   width: 100%;
   position: fixed;
+  opacity: 40%;
   z-index: 1;
 }
 
@@ -137,6 +152,17 @@ li {
 
 .nav-item {
   color: var(--secondary);
+  font-family: 'Montserrat Alternates', sans-serif;
+  /* text-decoration: underline; */
+  background: linear-gradient(to left, #00000000 50%, var(--accent-2) 50%) right;
+  background-size: 200%;
+}
+
+.nav-item:hover {
+  background-position: left;
+  /* border-left: 1px #faa907; */
+  transition: ease-in 0.5s;
+  font-weight: 800;
 }
 
 .landing {
@@ -145,81 +171,132 @@ li {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 15em;
+  gap: 8em;
   align-items: center;
   position: relative;
   z-index: 2;
 }
 
-.landing-intro{
+.landing-intro {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   font-size: calc(1.6rem + 2vw);
 }
 
-.landing-heading:nth-child(2){
+.landing-heading:nth-child(2) {
   font-family: 'Gogh', sans-serif;
   font-size: calc(1.7rem + 2vw);
 }
 
-.landing__blogs{
+.landing__blogs {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  align-content: center;
   gap: 6em;
 }
 
-.landing__blogs-heading{
+.landing__blogs-heading {
   font-family: 'Gogh', sans-serif;
   font-size: calc(1rem + 2vw);
   color: var(--secondary);
 }
 
-.blogs{
+.blogs {
+  width: 80%;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  /* align-items: center; */
+  align-content: center;
+  flex-wrap: wrap;
   gap: 5em;
   font-family: 'Montserrat Alternates', sans-serif;
   /* font-size: calc(0.1rem + 2vw); */
 }
 
-.blogs__divider{
+.blogs__divider {
   border: solid 1px;
   border-color: var(--secondary);
 }
 
-.blogs__entry{
+.blogs__block {
+  width: 100%;
+  justify-content: center;
+  /* align-items: center; */
+  align-content: center;
+  display: flex;
+  flex-direction: row;
+  gap: 5em;
+}
+
+.blogs__entry {
+  flex-basis: 30%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1em;
 }
 
-.blogs-title{
+.blogs-title {
   font-size: 3rem;
 }
 
-.blogs__links{
+.blogs__links {
+  width: inherit;
   display: flex;
   flex-direction: column;
   gap: 1em;
+  text-align: center;
 }
 
-.blog-link{
+.blog-link {
   font-size: 2rem;
   color: var(--secondary);
   font-weight: 500;
   font-style: italic;
-  padding-left: 0.5em;
-  border-left: 1px solid var(--accent-2);
-  text-decoration: underline;
+  /* padding-left: 0.5em; */
+  /* border-left: 1px solid var(--accent-2); */
+  /* text-decoration: underline; */
   background: linear-gradient(to left, #00000000 50%, var(--accent-2) 50%) right;
   background-size: 200%;
 }
 
-.blog-link:hover{
+.blog-link:hover {
   background-position: left;
   border-left: 1px #faa907;
   transition: ease-in 0.5s;
+  font-weight: 800;
 }
+
+/* LANDING PAGE STYLING ENDS */
+
+/* LANDING PAGE MEDIA QUERIES BEGINS */
+
+@media screen and (max-width: 980px) {
+  .blogs {
+    padding-bottom: 10vh;
+  }
+
+  .blogs__block {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .blogs__divider {
+    width: 50%;
+  }
+
+  .blogs__divider--alt {
+    width: 50%;
+  }
+}
+
+/* LANDING PAGE MEDIA QUERIES ENDS */
+
+/*  TE HOUTAEWA BEGINS */
+
