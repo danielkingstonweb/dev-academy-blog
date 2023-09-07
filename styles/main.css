@@ -1,6 +1,6 @@
 * {
   padding: 0;
-  margin: 0;
+  margin: 0 !important;
   box-sizing: border-box;
   text-decoration: none;
 }
@@ -23,7 +23,7 @@ li {
   cursor: pointer;
 }
 
-.light {
+:root {
   --primary: #eae3d3;
   --secondary: #030303;
   --white: #f4f4f4;
@@ -32,14 +32,23 @@ li {
   --accent-3: #080877;
 }
 
-.dark {
+/* .light {
+  --primary: #eae3d3;
+  --secondary: #030303;
+  --white: #f4f4f4;
+  --accent-1: #e01606;
+  --accent-2: #faa907;
+  --accent-3: #080877;
+} */
+
+/* .dark {
   --primary: #030303;
   --secondary: #eae3d3;
   --white: #f4f4f4;
   --accent-1: #e01606;
   --accent-2: #faa907;
   --accent-3: #080877;
-}
+} */
 
 /* Scrollbar Styling Begins */
 ::-webkit-scrollbar {
@@ -58,13 +67,25 @@ li {
   background: #6d6d6d;
 }
 
+@font-face {
+  font-family: "Gogh";
+  src: url("../fonts/Gogh-ExtraBold.otf"),
+  url("../fonts/Gogh-ExtraBoldItalic.otf");
+}
+
+@font-face {
+  font-family: 'Barbarella';
+  src: url("../fonts/gogh/Barbarella.otf");
+}
+
 .landing-backrgound {
   background: linear-gradient(-83deg, #daffa3, #a5fff5, #ffabe2, #ffe0a1);
   background-size: 400% 400%;
   animation: gradient 8s ease-in-out infinite;
   height: 100vh;
   width: 100%;
-  position: absolute;
+  position: fixed;
+  z-index: 1;
 }
 
 @keyframes gradient {
@@ -85,7 +106,10 @@ li {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  /* align-items: center; */
   padding: 2em;
+  position: relative;
+  z-index: 2;
 }
 
 .navigation-link {
@@ -106,10 +130,96 @@ li {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   gap: 1em;
   font-size: 2rem;
 }
 
 .nav-item {
   color: var(--secondary);
+}
+
+.landing {
+  height: 85vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 15em;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.landing-intro{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: calc(1.6rem + 2vw);
+}
+
+.landing-heading:nth-child(2){
+  font-family: 'Gogh', sans-serif;
+  font-size: calc(1.7rem + 2vw);
+}
+
+.landing__blogs{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6em;
+}
+
+.landing__blogs-heading{
+  font-family: 'Gogh', sans-serif;
+  font-size: calc(1rem + 2vw);
+  color: var(--secondary);
+}
+
+.blogs{
+  display: flex;
+  flex-direction: row;
+  gap: 5em;
+  font-family: 'Montserrat Alternates', sans-serif;
+  /* font-size: calc(0.1rem + 2vw); */
+}
+
+.blogs__divider{
+  border: solid 1px;
+  border-color: var(--secondary);
+}
+
+.blogs__entry{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.blogs-title{
+  font-size: 3rem;
+}
+
+.blogs__links{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.blog-link{
+  font-size: 2rem;
+  color: var(--secondary);
+  font-weight: 500;
+  font-style: italic;
+  padding-left: 0.5em;
+  border-left: 1px solid var(--accent-2);
+  text-decoration: underline;
+  background: linear-gradient(to left, #00000000 50%, var(--accent-2) 50%) right;
+  background-size: 200%;
+}
+
+.blog-link:hover{
+  background-position: left;
+  border-left: 1px #faa907;
+  transition: ease-in 0.5s;
 }
