@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class vs ID | Daniel's Blog</title>
+    <!-- Google Fonts - Montserrat Alternatives -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="./img/logos/browser.png" />
+    <!-- Local Stylesheet -->
+    <link href="../styles/main.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <div class="landing-backrgound"></div>
+    <!-- Navigation Begins -->
+
+    <header class="navigation">
+      <a href="/index.html" class="navigation-link">
+        <div class="navigation-logo"></div>
+      </a>
+      <nav class="nav">
+        <div class="nav__item">
+          <a href="/index.html" class="nav-item">home</a>
+        </div>
+        <!-- <div class="nav__item">
+          <a href="#" class="nav-item">blogs</a>
+        </div> -->
+        <div class="nav__item">
+          <a href="https://danielkingstonweb.github.io/" class="nav-item"
+            >portfolio</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <main class="identifiers">
+      <div class="identifiers__block">
+        <div class="identifiers__block-left">
+          <div class="identifiers__header global__header">
+            <h1 class="identifiers-header global-heading">ID's vs Classes</h1>
+            <h2 class="identifiers-subheading global-subheading">
+              What's Best Practice
+            </h2>
+            <h3 class="identifiers-date global-date">7th September 2023</h3>
+          </div>
+          <div class="identifiers__body global__body">
+            <p class="identifiers-body global-body">
+              ID's and Classes are identifiers assigned to elements in an HTML
+              document. Although they have similar functions, they are not the
+              same and they do not always serve the same purpose.
+            </p>
+            <p class="identifiers-body global-body">
+              Assigning Classes and ID's to HTML elements allows you to target
+              groups of, or, specific elements with CSS Styling or JavaScript
+              Functions.
+            </p>
+            <p class="identifiers-body global-body">
+              A simple way to differenciate when you should use a class or an ID
+              is to ask yourself "is there more than one element which requires
+              the same style, now or at any time in the future?", and the answer
+              is even "maybe", then make it a class. ID's are unique and classes
+              are not.
+            </p>
+          </div>
+          <!-- <a href="#identifier2" class="btn">Continue</a> -->
+        </div>
+        <div class="identifiers-div"></div>
+        <div class="identifiers__block-right">
+          <div class="identifiers__example">
+            <p class="identifiers-example">#id</p>
+            <!-- <p class="identifiers-example--alt">This is an ID identifier</p> -->
+          </div>
+          <div class="identifiers__example">
+            <p class="identifiers-example">.class</p>
+            <!-- <div class="identifiers__border-div"></div> -->
+            <!-- <p class="identifiers-example">This is a class identifier</p> -->
+          </div>
+        </div>
+      </div>
+      <div id="identifier2" class="identifiers__block">
+        <div class="identifiers__trio">
+          <img
+            src="../img/html-css/button-class.png"
+            alt="An example of a button with a class"
+            class="indentifiers-trio-img"
+          />
+          <p class="identifiers-trio-body">An example of an element with a class</p>
+        </div>
+        <div class="identifiers__trio">
+          <img
+            src="../img/html-css/button-id.png"
+            alt="An example of a button with an id"
+            class="indentifiers-trio-img"
+          />
+          <p class="identifiers-trio-body">An example of an element with an id</p>
+        </div>
+        <div class="identifiers__trio">
+          <img
+            src="../img/html-css/button-class-id.png"
+            alt="An example of a button with an id and a class"
+            class="indentifiers-trio-img"
+          />
+          <p class="identifiers-trio-body">An example of an element with an id and a class</p>
+        </div>
+      </div>
+      <div class="identifiers__block">
+        <div class="identifiers__block-left">
+          <div class="identifiers__header global__header">
+            <h1 class="identifiers-header global-heading">Expanding on that example</h1>
+            <h2 class="identifiers-subheading global-subheading">
+              How would this be used in practice?
+            </h2>
+          </div>
+          <div class="identifiers__body global__body">
+            <p class="identifiers-body global-body">
+              Here you can see the button in question being styled using a class selector in CSS but also being called in JavaScript using a query selector targeting the ID of the button. 
+            </p>
+            <div class="identifiers-block">
+            <a target="_blank" href="https://www.youtube.com/watch?v=SHIMUoAJHYU&ab_channel=dcode" class="identifiers-link">Click here for additional resources </a>
+          </div>
+          </div>
+          <!-- <a href="#identifier2" class="btn">Continue</a> -->
+        </div>
+        <div class="identifiers-div"></div>
+        <div class="identifiers__block-right">
+          <img
+            src="../img/html-css/button-style-js.png"
+            alt="Button being styled and called in JS"
+            class="indentifiers-trio-img"
+          />
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -93,13 +93,22 @@ body {
 /* LANDING PAGE STYLING BEGINS */
 
 .landing-backrgound {
-  background: linear-gradient(-83deg, #daffa3, #a5fff5, #ffabe2, #ffe0a1);
+  background: linear-gradient(
+    -83deg,
+    #eae3d3,
+    #daffa3,
+    #a5fff5,
+    #eae3d3,
+    #ffabe2,
+    #ffe0a1,
+    #eae3d3
+  );
   background-size: 400% 400%;
-  animation: gradient 8s ease-in-out infinite;
+  animation: gradient 12s ease-in-out infinite;
   height: 100vh;
   width: 100%;
   position: fixed;
-  opacity: 40%;
+  opacity: 100%;
   z-index: 1;
 }
 
@@ -298,6 +307,47 @@ body {
 
 /* LANDING PAGE MEDIA QUERIES ENDS */
 
+/* GLOBAL BLOG HEADING STYLING BEGINS */
+
+.global__header {
+  display: flex;
+  flex-direction: column;
+}
+
+.global-heading {
+  font-family: 'Gogh', sans-serif;
+  color: var(--secondary);
+  font-size: calc(1.6rem + 2vw);
+}
+
+.global-subheading {
+  font-family: 'Gogh', sans-serif;
+  color: var(--secondary);
+  font-style: italic;
+  font-size: calc(0.1rem + 2vw);
+  padding-bottom: 1em;
+}
+
+.global-date {
+  font-family: 'Montserrat Alternates', sans-serif;
+  color: var(--secondary);
+  font-size: 2.5rem;
+  padding-left: 0.5em;
+  border-left: solid 2px;
+}
+
+.global__body {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  font-family: 'Montserrat Alternates', sans-serif;
+  color: var(--secondary);
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+/* GLOBAL BLOG HEADING STYLING ENDS */
+
 /*  TE HOUTAEWA BEGINS */
 
 .te-houtaewa {
@@ -309,33 +359,6 @@ body {
   gap: 5em;
   position: relative;
   z-index: 10;
-}
-
-.te-houtaewa__header {
-  display: flex;
-  flex-direction: column;
-}
-
-.te-houtaewa-heading {
-  font-family: 'Gogh', sans-serif;
-  color: var(--secondary);
-  font-size: calc(1.6rem + 2vw);
-}
-
-.te-houtaewa-subheading {
-  font-family: 'Gogh', sans-serif;
-  color: var(--secondary);
-  font-style: italic;
-  font-size: calc(0.1rem + 2vw);
-  padding-bottom: 1em;
-}
-
-.te-houtaewa-date {
-  font-family: 'Montserrat Alternates', sans-serif;
-  color: var(--secondary);
-  font-size: 2.5rem;
-  padding-left: 0.5em;
-  border-left: solid 2px;
 }
 
 .te-houtawea__body {
@@ -356,7 +379,123 @@ body {
 }
 
 @media screen and (max-width: 1200px) {
+  .te-houtaewa {
+    padding: 5em;
+  }
+
   .te-houtawea__body {
     width: 100%;
   }
 }
+
+/* Te Houtaewa Ends */
+
+/* ID's VS Classes Begins */
+
+.identifiers {
+  position: relative;
+  z-index: 11;
+  padding: 10em;
+  display: flex;
+  flex-direction: column;
+  gap: 10em;
+}
+
+.identifiers__block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 5em;
+}
+
+.identifiers__block-left {
+  flex-basis: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 5em;
+}
+
+.identifiers__block-right {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Gogh', sans-serif;
+}
+
+.identifiers__example {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.identifiers-example {
+  font-size: 12rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.identifiers-div {
+  border: 2px solid;
+  opacity: 50%;
+}
+
+/* .identifiers-example--alt{
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 2rem;
+} */
+
+.identifiers__trio {
+  width: 100%;
+  flex-basis: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+.indentifiers-trio-img {
+  width: 100%;
+  border-radius: 30px;
+}
+
+.identifiers-trio-body {
+  font-family: 'Montserrat Alternates', sans-serif;
+  color: var(--secondary);
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.identifiers-link {
+  font-size: 2rem;
+  color: var(--secondary);
+  font-weight: 500;
+  font-style: italic;
+  /* padding-left: 0.5em; */
+  /* border-left: 1px solid var(--accent-2); */
+  /* text-decoration: underline; */
+  background: linear-gradient(to left, #00000000 50%, var(--accent-2) 50%) right;
+  background-size: 200%;
+}
+
+.identifiers-link:hover {
+  background-position: left;
+  border-left: 1px #faa907;
+  transition: ease-in 0.5s;
+  font-weight: 800;
+}
+
+/* IDENTIFIERS STYLING ENDS */
+
+/* IDENTIFIERS MEDIA QUERIES BEGINS */
+
+@media screen and (max-width: 1200px) {
+  .identifiers {
+    padding: 5em;
+  }
+
+  .identifiers__block {
+    flex-direction: column;
+  }
+}
+
+/* IDENTIFIERS MEDIA QUERIES ENDS */
