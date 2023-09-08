@@ -75,8 +75,8 @@ li {
 
 @font-face {
   font-family: 'Gogh';
-  src: url('./fonts/Gogh-ExtraBold.otf'),
-    url('./fonts/Gogh-ExtraBoldItalic.otf');
+  src: url('../fonts/Gogh-ExtraBold.otf'),
+    url('../fonts/Gogh-ExtraBoldItalic.otf');
 }
 
 @font-face {
@@ -84,7 +84,7 @@ li {
   src: url('../fonts/gogh/Barbarella.otf');
 }
 
-/* FONTS END */
+/* FONTS BEGIN */
 
 body {
   background: var(--primary);
@@ -230,6 +230,7 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  font-family: 'Gogh', sans-serif;
   font-size: calc(1.6rem + 2vw);
 }
 
