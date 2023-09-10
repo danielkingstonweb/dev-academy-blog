@@ -271,6 +271,7 @@ body {
 .blogs__divider {
   border: solid 1px;
   border-color: var(--secondary);
+  opacity: 50%;
 }
 
 .blogs__block {
@@ -393,7 +394,7 @@ body {
 .te-houtaewa {
   width: 100%;
   height: 85vh;
-  padding: 10em;
+  padding: 5em 10em 10em 10em;
   display: flex;
   flex-direction: column;
   gap: 5em;
@@ -435,7 +436,7 @@ body {
 .identifiers {
   position: relative;
   z-index: 11;
-  padding: 10em;
+  padding: 5em 10em 10em 10em;
   display: flex;
   flex-direction: column;
   gap: 10em;
@@ -539,3 +540,61 @@ body {
 }
 
 /* IDENTIFIERS MEDIA QUERIES ENDS */
+
+/* LEARNING PLAN BEGINS */
+
+.learning {
+  padding: 5em 10em 10em 10em;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10em;
+  position: relative;
+  z-index: 12;
+}
+
+.learning__block {
+  display: flex;
+  flex-direction: row;
+  gap: 5em;
+}
+
+.learning__block-left {
+  display: flex;
+  flex-direction: column;
+  gap: 5em;
+}
+
+.learning__block-right {
+  flex-basis: 55%;
+}
+
+#learning-block-2 {
+  display: none;
+}
+
+#learning-block-3 {
+  display: none;
+}
+
+#learning-block-4 {
+  display: none;
+}
+
+#learning-block-5 {
+  display: none;
+}
+
+#learning-block-6 {
+  display: none;
+}
+
+#learning-block-7 {
+  display: none;
+}
+
+.learning-block-btn {
+  background: none;
+  border: none;
+}
+/* LEARNING PLAN ENDS */
