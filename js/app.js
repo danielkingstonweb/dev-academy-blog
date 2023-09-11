@@ -22,7 +22,7 @@ function closeActiveSection() {
   }
 }
 
-function hideShowToggle(sectionId) {
+function hideShowToggleLearning(sectionId) {
   closeActiveSection()
   hideShow(
     [
@@ -33,6 +33,25 @@ function hideShowToggle(sectionId) {
       'learning-block-5',
       'learning-block-6',
       'learning-block-7',
+    ],
+    sectionId
+  )
+  activeSection = sectionId
+
+  console.log(activeSection)
+}
+
+let activeSectionValues = 'values-block-1'
+
+function hideShowToggleValues(sectionId) {
+  closeActiveSection()
+  hideShow(
+    [
+      'values-block-1',
+      'values-block-2',
+      'values-block-3',
+      'values-block-4',
+      'values-block-5',
     ],
     sectionId
   )
