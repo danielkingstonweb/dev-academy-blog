@@ -587,6 +587,7 @@ body {
   border: none;
   cursor: pointer;
   border-bottom: solid 1px black;
+  font-weight: 500;
 }
 
 .learning-block-btn:hover{
@@ -596,6 +597,20 @@ body {
 }
 
 /* LEARNING PLAN ENDS */
+
+/* LEARNING PLAN MEDIA QUERIES BEGINS */
+
+@media screen and (max-width: 1200px) {
+  .learning {
+    padding: 5em;
+  }
+
+  .learning__block {
+    flex-direction: column;
+  }
+}
+
+/* LEARNING PLAN MEDIA QUERIES ENDS */
 
 /* Hidden Section Toggle Styling Begins*/
 .hidden{
