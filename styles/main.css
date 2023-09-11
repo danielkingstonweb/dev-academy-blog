@@ -569,32 +569,36 @@ body {
   flex-basis: 55%;
 }
 
-#learning-block-2 {
-  display: none;
+.learning-block-ul{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  align-items: flex-start;
 }
 
-#learning-block-3 {
-  display: none;
-}
-
-#learning-block-4 {
-  display: none;
-}
-
-#learning-block-5 {
-  display: none;
-}
-
-#learning-block-6 {
-  display: none;
-}
-
-#learning-block-7 {
-  display: none;
+.learning-block-item{
+  list-style: circle;
+  /* text-align: left; */
 }
 
 .learning-block-btn {
+  text-align: left;
   background: none;
   border: none;
+  cursor: pointer;
+  border-bottom: solid 1px black;
 }
+
+.learning-block-btn:hover{
+  color: var(--accent-2);
+  border-color: var(--accent-2);
+  transition: 0.3s ease-in-out;
+}
+
 /* LEARNING PLAN ENDS */
+
+/* Hidden Section Toggle Styling Begins*/
+.hidden{
+  display: none;
+}
+/* Hidden Section Toggle Styling Ends */
